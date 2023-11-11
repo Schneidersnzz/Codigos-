@@ -1,0 +1,18 @@
+-- Curso VHDL#3
+-- Autor: Júlio Rolim Schneiders 
+-- Data: 23/10/2023
+-- Exemplo somador de bits
+
+entity somador is
+    port(
+        a,b     :       in      integer range 0 to 15;
+        z       :       out     integer range 0 to 15
+
+    );
+end entity; 
+
+architecture main of somador is
+begin
+    z <= a + b;
+
+end main ; -- main
