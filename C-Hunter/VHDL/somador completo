@@ -1,0 +1,15 @@
+entity somador_completo is
+    port(
+        A, B        :       in  bit; -- ENTRADAS
+        Te          :       in  bit; -- ENTRADA TRANSPORTE DE ENTRADA
+        S           :       out bit; -- Saída -- Soma
+        Ts          :       out bit -- Transporte de saída 
+    );
+end somador_completo;
+
+architecture main of somador_completo is
+
+begin
+    s <= A xor B xor Te;
+    Ts <= (A and B) or (A and Te) or (B and Te); 
+end main ; -- main
